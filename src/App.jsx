@@ -92,7 +92,7 @@ localStorage.setItem('transactions', JSON.stringify(copy))
 		<input
           ref={balanceInput}
           type="text"
-          className="input input-bordered transition duration-300	"
+          className="input input-bordered transition duration-300 w-full"
         />
 
         <button
