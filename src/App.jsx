@@ -84,9 +84,9 @@ localStorage.setItem('transactions', JSON.stringify(copy))
   return (
     <div>
       <Toaster position="top-center" />
-      <div className=" flex items-start  flex-col gap-4 p-9  w-1/5">
-        <h1 className="font-bold text-2xl w-full">Deposit / Withdraw</h1>
-        <p>Balance :  {showBalance ? balance : '-------'}</p>
+      <div className=" flex items-start  flex-col gap-4 p-9  lg:w-1/4 md:w-1/2 w-full">
+        <h1 className="font-bold text-4xl md:text-2xl w-full ">Deposit / Withdraw</h1>
+        <p className="text-2xl md:text-base ">Balance :  {showBalance ? balance : '-------'}</p>
 		<button className="btn btn-info w-full" onClick={()=>{seToggle(!showBalance)}}>show balance</button>
         
 		<input
@@ -108,7 +108,8 @@ localStorage.setItem('transactions', JSON.stringify(copy))
           Withdraw
         </button>
       </div>
-	  <table className=" table">
+      <div className="overflow-x-auto w-full">
+         <table className=" table w-full ">
 		<thead>
 			<tr>
 				<th>#</th>
@@ -135,6 +136,8 @@ return (<tr key={index}>
 		}
 		</tbody>
 	  </table>
+      </div>
+	 
     </div>
   );
 }
